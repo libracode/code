@@ -1,0 +1,329 @@
+{extend name="Common/base"/}
+
+{block name="sidebar"}
+        <!-- 侧边导航栏 -->
+        <div class="left-sidebar">
+
+            <!-- 菜单 -->
+            <ul class="sidebar-nav">
+                <li class="sidebar-nav-link">
+                    <a href="index.html" class="active">
+                        <i class="am-icon-home sidebar-nav-link-logo"></i> 首页
+                    </a>
+                </li>
+                <li class="sidebar-nav-link">
+                    <a href="javascript:;" class="sidebar-nav-sub-title active">
+                        <i class="am-icon-user sidebar-nav-link-logo "></i> 用户
+                        <span class="am-icon-chevron-down am-fr am-margin-right-sm sidebar-nav-sub-ico sidebar-nav-sub-ico-rotate"></span>
+                    </a>
+                    <ul class="sidebar-nav sidebar-nav-sub" style="display: block;">
+                        <li class="sidebar-nav-link">
+                            <a href="{:url('Access/index')}" class="active">
+                                <span class="am-icon-angle-right sidebar-nav-link-logo"></span> 权限列表
+                            </a>
+                        </li>
+
+                        <li class="sidebar-nav-link">
+                            <a href="{:url('User/index')}">
+                                <span class="am-icon-angle-right sidebar-nav-link-logo"></span> 用户列表
+                            </a>
+                        </li>
+
+                        <li class="sidebar-nav-link">
+                            <a href="{:url('Role/index')}">
+                                <span class="am-icon-angle-right sidebar-nav-link-logo"></span> 用户组列表
+                            </a>
+                        </li>
+                    </ul>
+                </li>
+
+                <li class="sidebar-nav-link">
+                    <a href="javascript:;" class="sidebar-nav-sub-title">
+                        <i class="am-icon-gear sidebar-nav-link-logo"></i> 系统
+                        <span class="am-icon-chevron-down am-fr am-margin-right-sm sidebar-nav-sub-ico"></span>
+                    </a>
+                    <ul class="sidebar-nav sidebar-nav-sub">
+                        <li class="sidebar-nav-link">
+                            <a href="table-list.html">
+                                <span class="am-icon-angle-right sidebar-nav-link-logo"></span> 网站设置
+                            </a>
+                        </li>
+
+                        <li class="sidebar-nav-link">
+                            <a href="table-list-img.html">
+                                <span class="am-icon-angle-right sidebar-nav-link-logo"></span> 分类管理
+                            </a>
+                        </li>
+
+                        <li class="sidebar-nav-link">
+                            <a href="table-list-img.html">
+                                <span class="am-icon-angle-right sidebar-nav-link-logo"></span> 分类管理
+                            </a>
+                        </li>
+
+                        <li class="sidebar-nav-link">
+                            <a href="table-list-img.html">
+                                <span class="am-icon-angle-right sidebar-nav-link-logo"></span> 模型管理
+                            </a>
+                        </li>
+
+                        <li class="sidebar-nav-link">
+                            <a href="table-list-img.html">
+                                <span class="am-icon-angle-right sidebar-nav-link-logo"></span> 配置管理
+                            </a>
+                        </li>
+
+                        <li class="sidebar-nav-link">
+                            <a href="table-list-img.html">
+                                <span class="am-icon-angle-right sidebar-nav-link-logo"></span> 菜单管理
+                            </a>
+                        </li>
+
+                        <li class="sidebar-nav-link">
+                            <a href="table-list-img.html">
+                                <span class="am-icon-angle-right sidebar-nav-link-logo"></span> 导航管理
+                            </a>
+                        </li>
+                    </ul>
+                </li>
+
+                <li class="sidebar-nav-link">
+                    <a href="javascript:;" class="sidebar-nav-sub-title">
+                        <i class="am-icon-database sidebar-nav-link-logo"></i> 数据备份
+                        <span class="am-icon-chevron-down am-fr am-margin-right-sm sidebar-nav-sub-ico"></span>
+                    </a>
+                    <ul class="sidebar-nav sidebar-nav-sub">
+                        <li class="sidebar-nav-link">
+                            <a href="table-list.html">
+                                <span class="am-icon-angle-right sidebar-nav-link-logo"></span> 备份数据库
+                            </a>
+                        </li>
+
+                        <li class="sidebar-nav-link">
+                            <a href="table-list-img.html">
+                                <span class="am-icon-angle-right sidebar-nav-link-logo"></span> 还原数据库
+                            </a>
+                        </li>
+
+                    </ul>
+                </li>
+
+                <li class="sidebar-nav-link">
+                    <a href="javascript:;" class="sidebar-nav-sub-title">
+                        <i class="am-icon-table sidebar-nav-link-logo"></i> 扩展
+                        <span class="am-icon-chevron-down am-fr am-margin-right-sm sidebar-nav-sub-ico"></span>
+                    </a>
+                    <ul class="sidebar-nav sidebar-nav-sub">
+                        <li class="sidebar-nav-link">
+                            <a href="table-list.html">
+                                <span class="am-icon-angle-right sidebar-nav-link-logo"></span> 文字列表
+                            </a>
+                        </li>
+
+                        <li class="sidebar-nav-link">
+                            <a href="table-list-img.html">
+                                <span class="am-icon-angle-right sidebar-nav-link-logo"></span> 图文列表
+                            </a>
+                        </li>
+                    </ul>
+                </li>
+            </ul>
+        </div>
+{/block}
+
+{block name="body"}
+<!-- 内容区域 -->
+        <div class="tpl-content-wrapper">
+            <div class="row-content am-cf">
+                <div class="row">
+                    <div class="am-u-sm-12 am-u-md-12 am-u-lg-12">
+                        <div class="widget am-cf">
+                            <div class="widget-head am-cf">
+                                <div class="widget-title  am-cf">文章列表</div>
+
+
+                            </div>
+                            <div class="widget-body  am-fr">
+
+                                <div class="am-u-sm-12 am-u-md-6 am-u-lg-6">
+                                    <div class="am-form-group">
+                                        <div class="am-btn-toolbar">
+                                            <div class="am-btn-group am-btn-group-xs">
+                                                <button type="button" class="am-btn am-btn-default am-btn-success"><span class="am-icon-plus"></span> 新增</button>
+                                                <button type="button" class="am-btn am-btn-default am-btn-secondary"><span class="am-icon-save"></span> 保存</button>
+                                                <button type="button" class="am-btn am-btn-default am-btn-warning"><span class="am-icon-archive"></span> 审核</button>
+                                                <button type="button" class="am-btn am-btn-default am-btn-danger"><span class="am-icon-trash-o"></span> 删除</button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="am-u-sm-12 am-u-md-6 am-u-lg-3">
+                                    <div class="am-form-group tpl-table-list-select">
+                                        <select data-am-selected="{btnSize: 'sm'}">
+							              <option value="option1">所有类别</option>
+							              <option value="option2">IT业界</option>
+							              <option value="option3">数码产品</option>
+							              <option value="option3">笔记本电脑</option>
+							              <option value="option3">平板电脑</option>
+							              <option value="option3">只能手机</option>
+							              <option value="option3">超极本</option>
+							            </select>
+                                    </div>
+                                </div>
+                                <div class="am-u-sm-12 am-u-md-12 am-u-lg-3">
+                                    <div class="am-input-group am-input-group-sm tpl-form-border-form cl-p">
+                                        <input type="text" class="am-form-field ">
+                                        <span class="am-input-group-btn">
+            <button class="am-btn  am-btn-default am-btn-success tpl-table-list-field am-icon-search" type="button"></button>
+          </span>
+                                    </div>
+                                </div>
+
+                                <div class="am-u-sm-12">
+                                <table width="100%" class="am-table am-table-compact am-table-bordered am-table-radius am-table-striped tpl-table-black " id="example-r">
+                                    <thead>
+                                        <tr>
+                                            <th>ID</th>
+                                            <th>权限名称</th>
+                                            <th>节点</th>
+                                            <th>添加时间</th>
+                                            <th>状态</th>
+                                            <th>级别</th>
+                                            <th>操作</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr class="gradeX">
+                                        	<td></td>
+                                            <td>控制面板</td>
+                                            <td>Hongrun/main</td>
+                                            <td>2016-09-26</td>
+                                            <td>正常</td>
+                                            <td>一级</td>
+                                            <td>
+                                                <div class="tpl-table-black-operation">
+                                                    <a href="javascript:;">
+                                                        <i class="am-icon-pencil"></i> 编辑
+                                                    </a>
+                                                    <a href="javascript:;" class="tpl-table-black-operation-del">
+                                                        <i class="am-icon-trash"></i> 删除
+                                                    </a>
+                                                </div>
+                                            </td>
+                                        </tr>
+                                        <tr class="even gradeC">
+                                        	<td></td>
+                                            <td>├── 公共模块</td>
+                                            <td>Index/index</td>
+                                            <td>2016-09-26</td>
+                                            <td>正常</td>
+                                            <td>1级</td>
+                                            <td>
+                                                <div class="tpl-table-black-operation">
+                                                    <a href="javascript:;">
+                                                        <i class="am-icon-pencil"></i> 编辑
+                                                    </a>
+                                                    <a href="javascript:;" class="tpl-table-black-operation-del">
+                                                        <i class="am-icon-trash"></i> 删除
+                                                    </a>
+                                                </div>
+                                            </td>
+                                        </tr>
+                                        <tr class="gradeX">
+                                        	<td></td>
+                                            <td>├── 头部</td>
+                                            <td>Index/index</td>
+                                            <td>2016-09-26</td>
+                                            <td>正常</td>
+                                            <td>1级</td>
+                                            <td>
+                                                <div class="tpl-table-black-operation">
+                                                    <a href="javascript:;">
+                                                        <i class="am-icon-pencil"></i> 编辑
+                                                    </a>
+                                                    <a href="javascript:;" class="tpl-table-black-operation-del">
+                                                        <i class="am-icon-trash"></i> 删除
+                                                    </a>
+                                                </div>
+                                            </td>
+                                        </tr>
+                                        <tr class="even gradeC">
+                                        	<td></td>
+                                            <td>├── 收缩页</td>
+                                            <td>Index/index</td>
+                                            <td>2016-09-26</td>
+                                            <td>正常</td>
+                                            <td>1级</td>
+                                            <td>
+                                                <div class="tpl-table-black-operation">
+                                                    <a href="javascript:;">
+                                                        <i class="am-icon-pencil"></i> 编辑
+                                                    </a>
+                                                    <a href="javascript:;" class="tpl-table-black-operation-del">
+                                                        <i class="am-icon-trash"></i> 删除
+                                                    </a>
+                                                </div>
+                                            </td>
+                                        </tr>
+                                        <tr class="even gradeC">
+                                        	<td></td>
+                                            <td>├── 后台首页</td>
+                                            <td>Index/index</td>
+                                            <td>2016-09-26</td>
+                                            <td>正常</td>
+                                            <td>1级</td>
+                                            <td>
+                                                <div class="tpl-table-black-operation">
+                                                    <a href="javascript:;">
+                                                        <i class="am-icon-pencil"></i> 编辑
+                                                    </a>
+                                                    <a href="javascript:;" class="tpl-table-black-operation-del">
+                                                        <i class="am-icon-trash"></i> 删除
+                                                    </a>
+                                                </div>
+                                            </td>
+                                        </tr>
+
+                                        <tr class="even gradeC">
+                                        	<td></td>
+                                            <td>├── 订单列表</td>
+                                            <td>Index/index</td>
+                                            <td>2016-09-26</td>
+                                            <td>正常</td>
+                                            <td>1级</td>
+                                            <td>
+                                                <div class="tpl-table-black-operation">
+                                                    <a href="javascript:;">
+                                                        <i class="am-icon-pencil"></i> 编辑
+                                                    </a>
+                                                    <a href="javascript:;" class="tpl-table-black-operation-del">
+                                                        <i class="am-icon-trash"></i> 删除
+                                                    </a>
+                                                </div>
+                                            </td>
+                                        </tr>
+                                        <!-- more data -->
+                                    </tbody>
+                                </table>
+                                </div>
+                                <div class="am-u-lg-12 am-cf">
+
+                                    <div class="am-fr">
+                                        <ul class="am-pagination tpl-pagination">
+                                            <li class="am-disabled"><a href="#">«</a></li>
+                                            <li class="am-active"><a href="#">1</a></li>
+                                            <li><a href="#">2</a></li>
+                                            <li><a href="#">3</a></li>
+                                            <li><a href="#">4</a></li>
+                                            <li><a href="#">5</a></li>
+                                            <li><a href="#">»</a></li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+{/block}
